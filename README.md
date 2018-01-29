@@ -18,7 +18,7 @@ To install gotwilio, simply run `go get github.com/sfreiberg/gotwilio`.
 	func main() {
 		accountSid := "ABC123..........ABC123"
 		authToken := "ABC123..........ABC123"
-		twilio := gotwilio.NewTwilioClient(accountSid, authToken)
+		twilio := gotwilio.NewTwilioClient(accountSid, authToken, false)
 
 		from := "+15555555555"
 		to := "+15555555555"
@@ -37,7 +37,7 @@ To install gotwilio, simply run `go get github.com/sfreiberg/gotwilio`.
 	func main() {
 		accountSid := "ABC123..........ABC123"
 		authToken := "ABC123..........ABC123"
-		twilio := gotwilio.NewTwilioClient(accountSid, authToken)
+		twilio := gotwilio.NewTwilioClient(accountSid, authToken, false)
 
 		from := "+15555555555"
 		to := "+15555555555"
@@ -56,7 +56,7 @@ To install gotwilio, simply run `go get github.com/sfreiberg/gotwilio`.
 	func main() {
 		accountSid := "ABC123..........ABC123"
 		authToken := "ABC123..........ABC123"
-		twilio := gotwilio.NewTwilioClient(accountSid, authToken)
+		twilio := gotwilio.NewTwilioClient(accountSid, authToken, false)
 
 		from := "+15555555555"
 		to := "+15555555555"
