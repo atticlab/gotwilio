@@ -8,10 +8,10 @@ import (
 
 // ValidationResponse is returned after a text/sms message is posted to Twilio
 type LookupResponse struct {
-    countryCode    string `json:"country_code"`
-    phoneNumber    string `json:"phone_number"`
-    nationalFormat string `json:"national_format"`
-    url            string `json:"url"`
+    CountryCode    string `json:"country_code"`
+    PhoneNumber    string `json:"phone_number"`
+    NationalFormat string `json:"national_format"`
+    URL            string `json:"url"`
 }
 
 // Validate phone number uses Twilio LookUp service.
@@ -22,7 +22,7 @@ func (twilio *Twilio) ValidatePhoneNumber(phone string) (lookupResponse *LookupR
 	twilioUrl := lookupUrl + "/PhoneNumbers/" + phone
 
     if twilio.TestMode {
-        return &LookupResponse{countryCode: "UA", phoneNumber: phone, nationalFormat: phone, url: twilioUrl}, nil, nil
+        return &LookupResponse{CountryCode: "UA", PhoneNumber: phone, NationalFormat: phone, URL: twilioUrl}, nil, nil
     }
 
 	res, err := twilio.get(twilioUrl)
